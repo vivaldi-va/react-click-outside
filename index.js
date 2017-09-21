@@ -12,11 +12,11 @@ module.exports = function enhanceWithClickOutside(WrappedComponent) {
     }
 
     componentDidMount() {
-      window.addEventListener('click', this.handleClickOutside, true);
+      window.addEventListener('click', this.handleClickOutside, false, true);
     }
 
     componentWillUnmount() {
-      window.removeEventListener('click', this.handleClickOutside, true);
+      window.removeEventListener('click', this.handleClickOutside, false, true);
     }
 
     handleClickOutside(e) {

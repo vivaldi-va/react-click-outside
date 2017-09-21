@@ -34,12 +34,12 @@ module.exports = function enhanceWithClickOutside(WrappedComponent) {
     _createClass(EnhancedComponent, [{
       key: 'componentDidMount',
       value: function componentDidMount() {
-        window.addEventListener('click', this.handleClickOutside, true);
+        window.addEventListener('click', this.handleClickOutside, false, true);
       }
     }, {
       key: 'componentWillUnmount',
       value: function componentWillUnmount() {
-        window.removeEventListener('click', this.handleClickOutside, true);
+        window.removeEventListener('click', this.handleClickOutside, false, true);
       }
     }, {
       key: 'handleClickOutside',
